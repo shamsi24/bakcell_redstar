@@ -1,0 +1,21 @@
+jdk:
+  - openjdk17
+
+before_install:
+  - export ANDROID_HOME=/opt/android-sdk-linux
+  - export FLUTTER_HOME=$HOME/flutter
+  - git clone https://github.com/flutter/flutter.git -b stable --depth 1 $FLUTTER_HOME
+  - export PATH="$PATH:$FLUTTER_HOME/bin"
+  - flutter --version
+  - flutter config --no-analytics
+  - flutter precache --android --no-ios --no-web --no-macos --no-windows --no-linux --no-fuchsia
+  - flutter pub get
+
+install:
+  - export ANDROID_HOME=/opt/android-sdk-linux
+  - export FLUTTER_HOME=$HOME/flutter
+  - export PATH="$PATH:$FLUTTER_HOME/bin"
+  - flutter build aar --no-pub --build-number=${VERSION:-0.0.1}
+  - mkdir -p ~/.m2/repository
+  - cp -r build/host/outputs/repo/* ~/.m2/repository/
+  - ls -la ~/.m2/repository/az/kripton/redstar/
