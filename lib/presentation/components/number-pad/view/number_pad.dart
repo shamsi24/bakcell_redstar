@@ -7,12 +7,10 @@ import 'package:redstar_module/presentation/components/number-pad/provider/numbe
 
 class NumberPad extends StatelessWidget {
   final Function(PinItem) onTapNumber;
-  final bool? isVisible;
 
   const NumberPad({
     super.key,
     required this.onTapNumber,
-    this.isVisible,
   });
 
   @override
@@ -31,7 +29,6 @@ class NumberPad extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: rows.map((char) {
                     return NumberButton(
-                      isVisible: isVisible,
                       char: char.pin,
                       pinTitle: char.value,
                       onTap: () {

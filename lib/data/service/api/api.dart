@@ -4,14 +4,14 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
-import 'package:logging_service/service/debug_logging.dart';
-import 'package:retry/retry.dart';
 import 'package:redstar_module/data/endpoint/base/endpoint.dart';
 import 'package:redstar_module/data/endpoint/base/upload_endpoint.dart';
 import 'package:redstar_module/data/exception/error.dart';
 import 'package:redstar_module/data/model/base/response_model.dart';
 import 'package:redstar_module/data/service/api/api_interceptor.dart';
 import 'package:redstar_module/presentation/utils/constants.dart';
+// import 'package:logging_service/service/debug_logging.dart';
+import 'package:retry/retry.dart';
 
 class ApiService {
   final Dio _dio;
@@ -23,7 +23,7 @@ class ApiService {
 
     // Add interceptors
     _dio.interceptors.add(ApiInterceptor(dio: _dio));
-    _dio.interceptors.add(DebugLogging()); // Optional: for debugging
+    // _dio.interceptors.add(DebugLogging()); // Optional: for debugging
 
     // Handle bad SSL certificates
     (_dio.httpClientAdapter as IOHttpClientAdapter).createHttpClient = () {

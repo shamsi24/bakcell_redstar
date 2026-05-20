@@ -1,8 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:local_auth/local_auth.dart';
 import 'package:redstar_module/data/service/api/api.dart';
 import 'package:redstar_module/presentation/components/helper/date_picker_helper.dart';
-import 'package:redstar_module/presentation/manager/biometric/biometric_manager.dart';
 import 'package:redstar_module/presentation/shared/ui_refresh_controller.dart';
 
 // Create a singleton instance of GetIt for dependency injection.
@@ -21,10 +19,6 @@ class Injector {
   static _registerServices() {
     // Registers ApiService as a singleton, meaning a single instance is used throughout the app.
     locator.registerSingleton<ApiService>(ApiService());
-    // Registers BiometricManager as a singleton with LocalAuthentication dependency.
-    locator.registerSingleton<BiometricManager>(
-        BiometricManager(LocalAuthentication()));
-    // Registers NotificationManager as a singleton for managing notifications.
     // Registers UIRefreshController as a singleton to manage UI refreshes.
     locator.registerSingleton<UIRefreshController>(UIRefreshController());
   }

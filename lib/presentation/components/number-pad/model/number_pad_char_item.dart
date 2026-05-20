@@ -9,7 +9,7 @@ enum KeywordNumber {
   seven("7"),
   eight("8"),
   nine("9"),
-  biometric("-1"),
+  empty(""),
   clear("-2");
 
   const KeywordNumber(this.data);

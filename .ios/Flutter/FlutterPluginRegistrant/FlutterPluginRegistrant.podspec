@@ -19,15 +19,8 @@ Depends on all your plugins, and provides a function to register them.
   s.static_framework    = true
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.dependency 'Flutter'
-  s.dependency 'connectivity_plus'
-  s.dependency 'flutter_local_notifications'
-  s.dependency 'image_picker_ios'
   s.dependency 'local_auth_darwin'
-  s.dependency 'logging_service'
   s.dependency 'package_info_plus'
-  s.dependency 'sensors_plus'
-  s.dependency 'shake_flutter'
-  s.dependency 'share_plus'
   s.dependency 'shared_preferences_foundation'
   s.dependency 'sqflite_darwin'
   s.dependency 'url_launcher_ios'

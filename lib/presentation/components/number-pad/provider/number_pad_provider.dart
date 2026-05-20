@@ -19,7 +19,7 @@ class NumberPadProvider extends ChangeNotifier {
       PinItem(KeywordNumber.nine)
     ],
     [
-      PinItem(KeywordNumber.biometric),
+      PinItem(KeywordNumber.empty),
       PinItem(KeywordNumber.zero),
       PinItem(KeywordNumber.clear)
     ],

@@ -6,8 +6,6 @@ import 'package:redstar_module/app/view/app_runner.dart';
 import 'package:redstar_module/app/view/delegate.dart';
 import 'package:redstar_module/app/view/di.dart';
 
-import 'presentation/manager/connection/connection_manager.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Injector.register();
@@ -17,7 +15,6 @@ void main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  await ConnectionManager().initNoInternetListener();
 
   Bloc.observer = SimpleBlocObserver();
 

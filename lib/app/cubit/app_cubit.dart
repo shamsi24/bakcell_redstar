@@ -3,17 +3,16 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:logging_service/storage/debug_tool.dart';
+// import 'package:logging_service/storage/debug_tool.dart';
 import 'package:redstar_module/app/cubit/app_state.dart';
 import 'package:redstar_module/app/generic/generic_state.dart';
 import 'package:redstar_module/data/service/preferences/preferences.dart';
-import 'package:redstar_module/presentation/router/navigation.dart';
 
 class AppCubit extends Cubit<GenericState> {
   // Constructor initializes the cubit state and triggers the 'check' and '_startDebugTool' methods.
   AppCubit() : super(Initial()) {
     check();
-    _startDebugTool();
+    // _startDebugTool();
   }
 
   // Variable to track if a dialog is currently open.
@@ -29,9 +28,9 @@ class AppCubit extends Cubit<GenericState> {
   }
 
   // Starts the debug tool for tracking logs or debugging info.
-  void _startDebugTool() {
-    DebugTool().start(Navigation.context, "");
-  }
+  // void _startDebugTool() {
+  //   DebugTool().start(Navigation.context, "");
+  // }
 
   // Getter for accessing the list of pages.
   List<Widget> get pages => _pages;

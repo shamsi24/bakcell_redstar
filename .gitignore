@@ -37,3 +37,9 @@ doc/api/
 
 # Flutter
 .fvm/
+
+# iOS SPM
+# Build output and publish staging — both live in a separate SPM repo,
+# not in this Flutter source repo.
+ios_spm/
+.spm_publish/
