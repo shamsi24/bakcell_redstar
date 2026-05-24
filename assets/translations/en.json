@@ -84,5 +84,20 @@
     "termsAndConditions": "Terms and conditions",
     "personalDataPolicy": "Personal data processing policy",
     "documents": "Documents"
+  },
+
+  "home": {
+    "searchHint": "Restaurants, shops, etc.",
+    "seeAll": "See All",
+    "weeklyCampaigns": "Weekly Campaigns",
+    "regularCampaigns": "Regular Campaigns",
+    "partners": "Partners",
+    "heroTitle": "You can save up to {amount} this week!"
+  },
+
+  "main": {
+    "tabMain": "Main",
+    "tabGetQr": "Get QR",
+    "tabPartners": "Partners"
   }
 }

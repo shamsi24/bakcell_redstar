@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:redstar_module/presentation/components/button/primary_button.dart';
 import 'package:redstar_module/presentation/router/navigation.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
@@ -54,13 +55,13 @@ class PrimaryBottomSheet {
                       style: const TextStyle(fontSize: 16),
                       textAlign: TextAlign.center,
                     ),
-                  if (text != null) 30.vertical,
+                  if (text != null) 30.verticalSpace,
                   if (buttons != null)
                     for (var i in buttons) ...[
                       i,
-                      8.vertical,
+                      8.verticalSpace,
                     ],
-                  30.vertical,
+                  30.verticalSpace,
                 ],
               ),
             ),

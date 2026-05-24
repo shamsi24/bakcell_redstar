@@ -88,7 +88,7 @@ class PrimaryTextField extends StatelessWidget {
             size: 12.sp,
             color: UIColor.darkGrey,
           ),
-          8.vertical,
+          8.verticalSpace,
         ],
         TextFormField(
           expands: expands ?? false,
@@ -166,7 +166,7 @@ class PrimaryTextField extends StatelessWidget {
                 : borderRadius(),
           ),
         ),
-        if (headText != null) 16.vertical,
+        if (headText != null) 16.verticalSpace,
       ],
     );
   }

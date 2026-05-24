@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:redstar_module/presentation/shared/size.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomListTile extends StatelessWidget {
   final Widget? leading;
@@ -21,16 +21,16 @@ class CustomListTile extends StatelessWidget {
     return Row(
       children: [
         if (leading != null) leading ?? const SizedBox.shrink(),
-        15.horizontal,
+        15.horizontalSpace,
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (title != null) ...[
-              6.vertical,
+              6.verticalSpace,
               title ?? const SizedBox.shrink(),
             ],
             if (subtitle != null) ...[
-              4.vertical,
+              4.verticalSpace,
               subtitle ?? const SizedBox.shrink(),
             ],
           ],

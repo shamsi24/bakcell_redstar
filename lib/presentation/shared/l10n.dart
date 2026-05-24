@@ -91,6 +91,24 @@ class Lng {
   static String get personalDataPolicy => 'documents.personalDataPolicy'.tr();
   static String get documents => 'documents.documents'.tr();
 
+  /* ───────────── HOME ───────────── */
+
+  static String get homeSearchHint => 'home.searchHint'.tr();
+  static String get homeSeeAll => 'home.seeAll'.tr();
+  static String get homeWeeklyCampaigns => 'home.weeklyCampaigns'.tr();
+  static String get homeRegularCampaigns => 'home.regularCampaigns'.tr();
+  static String get homePartners => 'home.partners'.tr();
+  static String get homeHeroTitleTemplate => 'home.heroTitle'.tr();
+  static String homeHeroTitle(String amount) => 'home.heroTitle'.tr(
+        namedArgs: {'amount': amount},
+      );
+
+  /* ───────────── MAIN ───────────── */
+
+  static String get mainTabMain => 'main.tabMain'.tr();
+  static String get mainTabGetQr => 'main.tabGetQr'.tr();
+  static String get mainTabPartners => 'main.tabPartners'.tr();
+
   /* ───────────── PARAMETRIC EXAMPLE ───────────── */
 
   static String minimumSymbol(int count) => 'validation.minimumSymbol'.tr(

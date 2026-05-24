@@ -84,5 +84,20 @@
     "termsAndConditions": "İstifadə qaydaları",
     "personalDataPolicy": "Şəxsi məlumatların emalı siyasəti",
     "documents": "Sənədlər"
+  },
+
+  "home": {
+    "searchHint": "Restoranlar, mağazalar və s.",
+    "seeAll": "Hamısı",
+    "weeklyCampaigns": "Həftəlik kampaniyalar",
+    "regularCampaigns": "Adi kampaniyalar",
+    "partners": "Tərəfdaşlar",
+    "heroTitle": "Bu həftə {amount}-ə qədər qənaət edə bilərsiniz!"
+  },
+
+  "main": {
+    "tabMain": "Əsas",
+    "tabGetQr": "QR al",
+    "tabPartners": "Tərəfdaşlar"
   }
 }

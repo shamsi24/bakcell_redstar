@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 
-class ProfileIconButton extends StatelessWidget {
+class HomeProfileButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
-  const ProfileIconButton({super.key, this.onPressed});
+  const HomeProfileButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,6 @@ class ProfileIconButton extends StatelessWidget {
         color: UIColor.black,
         size: 26.sp,
       ),
-      splashRadius: 22.r,
     );
   }
 }

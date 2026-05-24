@@ -4,6 +4,7 @@ import 'package:animations/animations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:redstar_module/presentation/components/appbar/primary_app_bar.dart';
 import 'package:redstar_module/presentation/router/navigation.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
@@ -70,7 +71,7 @@ class RouteGenerator {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Icon(CupertinoIcons.time, size: 30),
-              8.vertical,
+              8.verticalSpace,
               const Center(
                 child: Label(
                   size: 18,

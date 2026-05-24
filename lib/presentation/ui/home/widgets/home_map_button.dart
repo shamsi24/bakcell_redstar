@@ -12,21 +12,21 @@ class HomeMapButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: UIColor.bakcellRedTint,
-      borderRadius: BorderRadius.circular(10.r),
+      borderRadius: BorderRadius.circular(14.r),
       child: InkWell(
-        borderRadius: BorderRadius.circular(10.r),
+        borderRadius: BorderRadius.circular(14.r),
         onTap: () {
           HapticFeedback.lightImpact();
           onPressed?.call();
         },
         child: Container(
-          width: 38.w,
-          height: 38.h,
+          width: 48.w,
+          height: 48.h,
           alignment: Alignment.center,
           child: Icon(
             Icons.map_outlined,
             color: UIColor.bakcellRed,
-            size: 20.sp,
+            size: 22.sp,
           ),
         ),
       ),

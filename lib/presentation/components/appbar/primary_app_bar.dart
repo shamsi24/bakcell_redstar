@@ -79,7 +79,7 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
                         weight: FontWeight.w500,
                       ),
                       if (subtitle != null) ...[
-                        6.vertical,
+                        6.verticalSpace,
                         Label(
                           text: subtitle!,
                           color: UIColor.white,

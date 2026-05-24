@@ -1,65 +1,36 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:redstar_module/app/view/di.dart';
-import 'package:redstar_module/data/service/preferences/preferences.dart';
-import 'package:redstar_module/presentation/shared/ui_refresh_controller.dart';
+import 'package:redstar_module/presentation/shared/shared.dart';
 
-enum BottomNavBarItem {
-  home("Img.home", "main"),
-  services("Img.buildings", "myProperties"),
-  payments("Img.coin", "myPayments"),
-  other("Img.category", "other");
+enum MainTab {
+  home(icon: Icons.home_rounded),
+  qr(icon: Icons.qr_code_2_rounded),
+  partners(icon: Icons.storefront_outlined);
 
-  final String asset;
-  final String text;
+  final IconData icon;
 
-  const BottomNavBarItem(this.asset, this.text);
-  String get localizationItem => text.tr();
+  const MainTab({required this.icon});
+
+  String get label {
+    switch (this) {
+      case MainTab.home:
+        return Lng.mainTabMain;
+      case MainTab.qr:
+        return Lng.mainTabGetQr;
+      case MainTab.partners:
+        return Lng.mainTabPartners;
+    }
+  }
 }
 
 class MainProvider extends ChangeNotifier {
-  MainProvider() {
-    locator<UIRefreshController>().mainControllerStream.listen((e) {
-      if (e == UIState.refreshed) {
-        refreshUi();
-      }
-    });
-  }
   int _currentIndex = 0;
 
-  String version = "";
-  int _count = 0;
-
-  String _userName = "";
-
-  String get userName => _userName;
-
-  int get count => _count;
-
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
-
-  Future<String> setUserName() async {
-    final prefs = await PreferencesService.instance;
-    _userName = prefs.fullName ?? "";
-    return _userName;
-  }
-
-  Future<int> setCount() async {
-    final prefs = await PreferencesService.instance;
-    _count = prefs.count ?? 0;
-    return _count;
-  }
-
-  List<BottomNavBarItem> get items => BottomNavBarItem.values;
   int get currentIndex => _currentIndex;
 
-  refreshUi() {
-    notifyListeners();
-  }
+  List<MainTab> get tabs => MainTab.values;
 
-  change(int index) {
+  void change(int index) {
+    if (_currentIndex == index) return;
     _currentIndex = index;
     notifyListeners();
   }

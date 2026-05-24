@@ -16,7 +16,7 @@ class NotFoundWidget extends StatelessWidget {
             "Img.notFound",
             height: 110.h,
           ),
-          24.vertical,
+          24.verticalSpace,
           const Label(
             align: TextAlign.center,
             color: UIColor.darkGrey,

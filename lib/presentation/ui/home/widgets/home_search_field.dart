@@ -12,20 +12,22 @@ class HomeSearchField extends StatelessWidget {
     final controller = context.read<HomeProvider>().fields.searchController;
     return TextField(
       controller: controller,
-      style: TextStyle(fontSize: 14.sp),
+      style: TextStyle(fontSize: 14.sp, color: UIColor.black),
       textInputAction: TextInputAction.search,
+      cursorColor: UIColor.bakcellRed,
       decoration: InputDecoration(
         isDense: true,
         filled: true,
         fillColor: UIColor.white,
-        hintText: 'Restaurants, shops, etc.',
+        hintText: Lng.homeSearchHint,
         hintStyle: TextStyle(
           color: UIColor.grey,
           fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
         ),
-        contentPadding: EdgeInsets.symmetric(vertical: 12.h),
+        contentPadding: EdgeInsets.symmetric(vertical: 14.h),
         prefixIcon: Padding(
-          padding: EdgeInsets.only(left: 12.w, right: 8.w),
+          padding: EdgeInsets.only(left: 14.w, right: 8.w),
           child: Icon(
             Icons.search,
             color: UIColor.grey,
@@ -46,9 +48,9 @@ class HomeSearchField extends StatelessWidget {
   OutlineInputBorder _border({Color? color}) {
     return OutlineInputBorder(
       borderSide: BorderSide(
-        color: color ?? UIColor.grey.withValues(alpha: 0.3),
+        color: color ?? UIColor.grey.withValues(alpha: 0.25),
       ),
-      borderRadius: BorderRadius.circular(10.r),
+      borderRadius: BorderRadius.circular(14.r),
     );
   }
 }

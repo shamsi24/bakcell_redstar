@@ -1,31 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_load_indexed_stack/lazy_load_indexed_stack.dart';
 import 'package:provider/provider.dart';
-import 'package:redstar_module/app/cubit/app_cubit.dart';
-import 'package:redstar_module/presentation/components/appbar/primary_app_bar.dart';
-import 'package:redstar_module/presentation/components/navbar/primary_bottom_navigation_bar.dart';
+import 'package:redstar_module/presentation/shared/shared.dart';
 import 'package:redstar_module/presentation/ui/main/provider/main_provider.dart';
+import 'package:redstar_module/presentation/ui/main/view/main_body.dart';
+import 'package:redstar_module/presentation/ui/main/widgets/main_bottom_nav.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final mainProvider = context.watch<MainProvider>();
-    final appCubit = context.read<AppCubit>();
-    final item = mainProvider.items[mainProvider.currentIndex];
-    final localizationItem = item.localizationItem;
-    return Scaffold(
-      appBar: PrimaryAppBar(
-        titleText: localizationItem,
-        context,
-        isLeading: false,
+    return ChangeNotifierProvider<MainProvider>(
+      create: (_) => MainProvider(),
+      child: const Scaffold(
+        backgroundColor: UIColor.white,
+        body: MainBody(),
+        bottomNavigationBar: MainBottomNav(),
       ),
-      body: LazyLoadIndexedStack(
-        index: mainProvider.currentIndex,
-        children: appCubit.pages,
-      ),
-      bottomNavigationBar: const PrimaryBottomNavigationBar(),
     );
   }
 }

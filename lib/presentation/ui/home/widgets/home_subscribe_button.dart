@@ -3,15 +3,21 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 
-class UpgradeButton extends StatelessWidget {
+class HomeSubscribeButton extends StatelessWidget {
+  final String label;
   final VoidCallback? onPressed;
 
-  const UpgradeButton({super.key, this.onPressed});
+  const HomeSubscribeButton({
+    super.key,
+    required this.label,
+    this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 36.h,
+      width: double.infinity,
+      height: 48.h,
       child: ElevatedButton(
         onPressed: () {
           HapticFeedback.lightImpact();
@@ -20,17 +26,16 @@ class UpgradeButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: UIColor.bakcellRed,
           foregroundColor: UIColor.white,
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
           elevation: 0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.r),
+            borderRadius: BorderRadius.circular(12.r),
           ),
         ),
         child: Label(
-          text: 'Upgrade',
-          color: UIColor.white,
+          text: label,
+          size: 15.sp,
           weight: FontWeight.w600,
-          size: 14.sp,
+          color: UIColor.white,
         ),
       ),
     );

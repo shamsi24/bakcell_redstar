@@ -9,7 +9,7 @@ import 'package:redstar_module/app/generic/generic_state.dart';
 import 'package:redstar_module/presentation/router/navigation.dart';
 import 'package:redstar_module/presentation/router/route_generator.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
-import 'package:redstar_module/presentation/ui/home/view/home_page.dart';
+import 'package:redstar_module/presentation/ui/main/view/main_page.dart';
 import 'package:upgrader/upgrader.dart';
 
 // The main application widget, which is stateless and manages the initial setup.
@@ -69,7 +69,7 @@ class App extends StatelessWidget {
       case const (Unauthorized):
       case const (NavigateToPage):
       default:
-        return const HomePage();
+        return const MainPage();
     }
   }
 }

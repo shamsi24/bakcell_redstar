@@ -84,5 +84,20 @@
     "termsAndConditions": "Условия использования",
     "personalDataPolicy": "Политика обработки персональных данных",
     "documents": "Документы"
+  },
+
+  "home": {
+    "searchHint": "Рестораны, магазины и т.д.",
+    "seeAll": "Все",
+    "weeklyCampaigns": "Еженедельные акции",
+    "regularCampaigns": "Постоянные акции",
+    "partners": "Партнёры",
+    "heroTitle": "На этой неделе вы можете сэкономить до {amount}!"
+  },
+
+  "main": {
+    "tabMain": "Главная",
+    "tabGetQr": "QR-код",
+    "tabPartners": "Партнёры"
   }
 }

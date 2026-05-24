@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 import 'package:redstar_module/presentation/ui/home/provider/home_provider.dart';
-import 'package:redstar_module/presentation/ui/home/widgets/home_campaign_card.dart';
 import 'package:redstar_module/presentation/ui/home/widgets/home_section_title.dart';
+import 'package:redstar_module/presentation/ui/home/widgets/weekly_campaign_card.dart';
 
 class WeeklyCampaignsSection extends StatelessWidget {
   const WeeklyCampaignsSection({super.key});
@@ -12,24 +12,23 @@ class WeeklyCampaignsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final campaigns = context.select<HomeProvider, List>(
-      (provider) => provider.campaigns,
+      (p) => p.weeklyCampaigns,
     );
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const HomeSectionTitle(text: 'Weekly Campaigns'),
-        12.vertical,
+        HomeSectionTitle(title: Lng.homeWeeklyCampaigns),
+        12.verticalSpace,
         SizedBox(
-          height: 230.h,
+          height: 170.h,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.symmetric(horizontal: 16.w),
+            physics: const BouncingScrollPhysics(),
             itemCount: campaigns.length,
-            separatorBuilder: (_, __) => 12.horizontal,
-            itemBuilder: (_, index) => HomeCampaignCard(
-              campaign: campaigns[index],
-            ),
+            separatorBuilder: (_, __) => 12.horizontalSpace,
+            itemBuilder: (_, index) =>
+                WeeklyCampaignCard(campaign: campaigns[index]),
           ),
         ),
       ],
