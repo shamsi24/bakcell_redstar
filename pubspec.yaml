@@ -81,5 +81,7 @@ flutter:
   assets:
     - assets/translations/
     - assets/icons/
+    - assets/icons/3d_icons/
+    - assets/icons/linear_icons/
 
 
