@@ -47,7 +47,10 @@ class WeeklyCampaignCard extends StatelessWidget {
           Positioned(
             top: 12.h,
             right: 12.w,
-            child: HomePillBadge(text: campaign.periodLabel),
+            child: HomePillBadge(
+              text: campaign.periodLabel,
+              isWeeklyTag: true,
+            ),
           ),
           Positioned(
             left: 14.w,

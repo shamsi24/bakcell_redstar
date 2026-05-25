@@ -30,7 +30,7 @@ class MainBottomNavItem extends StatelessWidget {
         onTap();
       },
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 20.w),
+        padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 40.w),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -42,7 +42,7 @@ class MainBottomNavItem extends StatelessWidget {
             6.verticalSpace,
             Label(
               text: label,
-              size: 11.sp,
+              size: 10.sp,
               weight: FontWeight.w400,
               color: color,
             ),

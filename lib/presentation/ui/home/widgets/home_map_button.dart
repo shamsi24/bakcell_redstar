@@ -12,9 +12,9 @@ class HomeMapButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: UIColor.bakcellRedTint,
-      borderRadius: BorderRadius.circular(10.r),
+      borderRadius: BorderRadius.circular(6.r),
       child: InkWell(
-        borderRadius: BorderRadius.circular(10.r),
+        borderRadius: BorderRadius.circular(6.r),
         onTap: () {
           HapticFeedback.lightImpact();
           onPressed?.call();

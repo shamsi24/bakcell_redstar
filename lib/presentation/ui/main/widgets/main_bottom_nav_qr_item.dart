@@ -46,7 +46,7 @@ class MainBottomNavQrItem extends StatelessWidget {
             6.verticalSpace,
             Label(
               text: label,
-              size: 11.sp,
+              size: 10.sp,
               weight: FontWeight.w600,
               color: UIColor.bakcellRed,
             ),

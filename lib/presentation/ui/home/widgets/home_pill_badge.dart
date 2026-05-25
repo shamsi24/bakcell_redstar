@@ -9,6 +9,8 @@ class HomePillBadge extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
 
+  final bool isWeeklyTag;
+
   const HomePillBadge({
     super.key,
     required this.text,
@@ -16,6 +18,7 @@ class HomePillBadge extends StatelessWidget {
     this.textColor = UIColor.white,
     this.fontSize = 11,
     this.fontWeight = FontWeight.w600,
+    this.isWeeklyTag = false,
   });
 
   @override
@@ -23,7 +26,11 @@ class HomePillBadge extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
       decoration: BoxDecoration(
-        color: backgroundColor,
+        gradient: isWeeklyTag
+            ? null
+            : LinearGradient(
+                colors: [UIColor.bakcellRed, UIColor.bakcellLightRed]),
+        color: isWeeklyTag ? UIColor.bakcellRed : null,
         borderRadius: BorderRadius.circular(8.r),
       ),
       child: Label(

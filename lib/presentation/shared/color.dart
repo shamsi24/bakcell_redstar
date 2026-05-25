@@ -18,6 +18,7 @@ abstract class UIColor {
 
   //Bakcell brand
   static const Color bakcellRed = Color(0xffFF0037);
+  static const Color bakcellLightRed = Color(0xffFF7A7A);
   static const Color bakcellRedTint = Color(0xffFFEBED);
   static const Color primaryTextColor = Color(0xff200000);
 

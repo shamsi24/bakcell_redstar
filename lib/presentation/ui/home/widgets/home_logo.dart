@@ -11,13 +11,13 @@ class HomeLogo extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
-          Icons.local_florist,
+          Icons.star,
           color: UIColor.bakcellRed,
           size: 22.sp,
         ),
         6.horizontalSpace,
         Label(
-          text: 'red star',
+          text: 'club red',
           size: 20.sp,
           weight: FontWeight.w700,
           color: UIColor.bakcellRed,
