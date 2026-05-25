@@ -13,7 +13,7 @@ class PartnersCategoriesSection extends StatelessWidget {
     final categories = provider.categories;
     final selectedId = provider.selectedCategoryId;
     return SizedBox(
-      height: 48.h,
+      height: 30.h,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.symmetric(horizontal: 16.w),

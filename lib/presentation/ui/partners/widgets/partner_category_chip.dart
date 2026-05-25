@@ -20,8 +20,8 @@ class PartnerCategoryChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final background =
         isSelected ? const Color(0xff1A0508) : UIColor.bakcellRedTint;
-    final iconColor = isSelected ? UIColor.white : UIColor.bakcellRed;
-    final textColor = isSelected ? UIColor.white : UIColor.black;
+    final iconColor = isSelected ? UIColor.white : UIColor.primaryTextColor;
+    final textColor = isSelected ? UIColor.white : UIColor.primaryTextColor;
     return Material(
       color: background,
       borderRadius: BorderRadius.circular(10.r),
@@ -32,7 +32,7 @@ class PartnerCategoryChip extends StatelessWidget {
           onTap();
         },
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 10.h),
+          padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 7.h),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [

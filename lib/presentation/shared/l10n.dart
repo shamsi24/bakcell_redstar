@@ -139,6 +139,7 @@ class Lng {
   static String get partnerTabTerms => 'partnerDetail.tabTerms'.tr();
   static String get partnerRedeem => 'partnerDetail.redeem'.tr();
   static String get partnerRedeemed => 'partnerDetail.redeemed'.tr();
+  static String get partnerExpired => 'partnerDetail.expired'.tr();
   static String get partnerWeekly => 'partnerDetail.weekly'.tr();
   static String get partnerRegular => 'partnerDetail.regular'.tr();
   static String get partnerDiscountSuffix =>

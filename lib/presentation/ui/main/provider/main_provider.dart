@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 
 enum MainTab {
-  home(icon: Icons.home_rounded),
-  qr(icon: Icons.qr_code_2_rounded),
-  partners(icon: Icons.storefront_outlined);
+  home(icon: Img.home),
+  qr(icon: Img.scan),
+  partners(icon: Img.exhibition);
 
-  final IconData icon;
+  final String icon;
 
   const MainTab({required this.icon});
 

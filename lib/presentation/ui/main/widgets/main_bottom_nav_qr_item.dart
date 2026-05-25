@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
-import 'package:redstar_module/presentation/ui/main/widgets/qr_brand_icon.dart';
 
 class MainBottomNavQrItem extends StatelessWidget {
   final String label;
@@ -37,7 +37,11 @@ class MainBottomNavQrItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12.r),
               ),
               alignment: Alignment.center,
-              child: QrBrandIcon(size: 26.sp),
+              child: SvgPicture.asset(
+                Img.scan,
+                height: 24.h,
+                colorFilter: ColorFilter.mode(UIColor.white, BlendMode.srcIn),
+              ),
             ),
             6.verticalSpace,
             Label(

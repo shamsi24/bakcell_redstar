@@ -49,7 +49,7 @@ class MainBottomNav extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: -10.h,
+                top: -20.h,
                 left: 0,
                 right: 0,
                 child: Center(

@@ -5,8 +5,10 @@ import 'package:redstar_module/presentation/shared/shared.dart';
 import 'package:redstar_module/presentation/ui/partner_detail/model/partner_offer.dart';
 import 'package:redstar_module/presentation/ui/partner_detail/widgets/dashed_line.dart';
 import 'package:redstar_module/presentation/ui/partner_detail/widgets/partner_offer_discount_badge.dart';
+import 'package:redstar_module/presentation/ui/partner_detail/widgets/partner_offer_expired_label.dart';
 import 'package:redstar_module/presentation/ui/partner_detail/widgets/partner_offer_period_badge.dart';
 import 'package:redstar_module/presentation/ui/partner_detail/widgets/partner_offer_redeem_button.dart';
+import 'package:redstar_module/presentation/ui/partner_detail/widgets/ticket_card_clipper.dart';
 
 class PartnerOfferCard extends StatelessWidget {
   final PartnerOffer offer;
@@ -21,25 +23,50 @@ class PartnerOfferCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bg = isRedeemed ? UIColor.lightGray : UIColor.bakcellRedTint;
-    return Container(
-      padding: EdgeInsets.all(12.w),
-      decoration: BoxDecoration(
-        color: bg,
-        borderRadius: BorderRadius.circular(16.r),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          _OfferMedia(offer: offer, isRedeemed: isRedeemed),
-          12.verticalSpace,
-          const DashedLine(),
-          12.verticalSpace,
-          PartnerOfferRedeemButton(
-            offerId: offer.id,
-            isRedeemed: isRedeemed,
+    final padding = 12.r;
+    final imageGap = 12.h;
+    final bottomGap = 12.h;
+    final borderRadius = 16.r;
+    final notchRadius = 10.r;
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final width = constraints.maxWidth;
+        final imageWidth = width - padding * 2;
+        final imageHeight = imageWidth * 10 / 16;
+        final notchY = padding + imageHeight + imageGap;
+
+        return ClipPath(
+          clipper: TicketCardClipper(
+            borderRadius: borderRadius,
+            notchRadius: notchRadius,
+            notchY: notchY,
           ),
-        ],
-      ),
+          child: Container(
+            color: bg,
+            padding: EdgeInsets.all(padding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _OfferMedia(offer: offer, isRedeemed: isRedeemed),
+                SizedBox(height: imageGap),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: notchRadius),
+                  child: const DashedLine(),
+                ),
+                SizedBox(height: bottomGap),
+                if (isRedeemed)
+                  const PartnerOfferExpiredLabel()
+                else
+                  PartnerOfferRedeemButton(
+                    offerId: offer.id,
+                    isRedeemed: false,
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }

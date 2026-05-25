@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 
 class MainBottomNavItem extends StatelessWidget {
-  final IconData icon;
+  final String icon;
   final String label;
   final bool isActive;
   final VoidCallback onTap;
@@ -31,7 +32,9 @@ class MainBottomNavItem extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: color, size: 26.sp),
+            SvgPicture.asset(icon,
+                colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+                height: 26.h),
             6.verticalSpace,
             Label(
               text: label,
