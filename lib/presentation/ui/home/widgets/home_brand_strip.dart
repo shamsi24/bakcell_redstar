@@ -10,7 +10,7 @@ class HomeBrandStrip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final logoSize = 44.r;
+    final logoSize = 40.r;
     final arcDepth = 20.h;
     return SizedBox(
       height: logoSize + arcDepth,
@@ -26,17 +26,20 @@ class HomeBrandStrip extends StatelessWidget {
 
           return Stack(
             clipBehavior: Clip.none,
-            children: List.generate(count, (i) {
-              final t = count > 1 ? i / (count - 1) : 0.5;
-              final edgeWeight = 4 * (t - 0.5) * (t - 0.5);
-              final yOffset = arcDepth * (1 - edgeWeight);
-              final x = startX + i * stepX - logoSize / 2;
-              return Positioned(
-                left: x,
-                top: yOffset,
-                child: HomeBrandLogo(brand: brands[i]),
-              );
-            }),
+            children: List.generate(
+              count,
+              (i) {
+                final t = count > 1 ? i / (count - 1) : 0.5;
+                final edgeWeight = 4 * (t - 0.5) * (t - 0.5);
+                final yOffset = arcDepth * (1 - edgeWeight);
+                final x = startX + i * stepX - logoSize / 2;
+                return Positioned(
+                  left: x,
+                  top: yOffset,
+                  child: HomeBrandLogo(brand: brands[i]),
+                );
+              },
+            ),
           );
         },
       ),

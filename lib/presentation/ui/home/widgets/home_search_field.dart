@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 import 'package:redstar_module/presentation/ui/home/provider/home_provider.dart';
+import 'package:redstar_module/presentation/ui/home/widgets/home_map_button.dart';
 
 class HomeSearchField extends StatelessWidget {
   const HomeSearchField({super.key});
@@ -21,22 +23,30 @@ class HomeSearchField extends StatelessWidget {
         fillColor: UIColor.white,
         hintText: Lng.homeSearchHint,
         hintStyle: TextStyle(
-          color: UIColor.grey,
+          color: UIColor.darkGrey,
           fontSize: 14.sp,
           fontWeight: FontWeight.w400,
         ),
         contentPadding: EdgeInsets.symmetric(vertical: 14.h),
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 14.w, right: 8.w),
-          child: Icon(
-            Icons.search,
-            color: UIColor.grey,
-            size: 20.sp,
+          child: SvgPicture.asset(
+            Img.search,
+            colorFilter: ColorFilter.mode(UIColor.grey, BlendMode.srcIn),
+            height: 20.sp,
           ),
         ),
         prefixIconConstraints: BoxConstraints(
           minWidth: 36.w,
           minHeight: 36.h,
+        ),
+        suffixIcon: Padding(
+          padding: EdgeInsets.only(right: 6.w, top: 5.h, bottom: 5.h),
+          child: const HomeMapButton(),
+        ),
+        suffixIconConstraints: BoxConstraints(
+          minWidth: 48.w,
+          minHeight: 40.h,
         ),
         border: _border(),
         enabledBorder: _border(),
@@ -48,7 +58,7 @@ class HomeSearchField extends StatelessWidget {
   OutlineInputBorder _border({Color? color}) {
     return OutlineInputBorder(
       borderSide: BorderSide(
-        color: color ?? UIColor.grey.withValues(alpha: 0.25),
+        color: color ?? UIColor.grey.withValues(alpha: 0.4),
       ),
       borderRadius: BorderRadius.circular(14.r),
     );

@@ -5,8 +5,8 @@ abstract class UIColor {
   static const Color background = Color(0xffF7F7F7);
   static const Color lightGray = Color(0xffF6F6F6);
   static const Color lightBlue = Color(0xff95D2FF);
-  static const Color grey = Color(0xffBABBBB);
-  static const Color darkGrey = Color(0xff6F6F6F);
+  static const Color grey = Color(0xffACA6A6);
+  static const Color darkGrey = Color(0xff695F5F);
   static const Color red = Color(0xffFF5656);
   static const Color darkRed = Color(0xffEE1924);
   static const Color black = Color(0xff000000);

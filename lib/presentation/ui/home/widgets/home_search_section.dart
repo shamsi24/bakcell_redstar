@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:redstar_module/presentation/ui/home/widgets/home_map_button.dart';
 import 'package:redstar_module/presentation/ui/home/widgets/home_search_field.dart';
 
 class HomeSearchSection extends StatelessWidget {
@@ -10,13 +9,7 @@ class HomeSearchSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Row(
-        children: [
-          const Expanded(child: HomeSearchField()),
-          10.horizontalSpace,
-          const HomeMapButton(),
-        ],
-      ),
+      child: const HomeSearchField(),
     );
   }
 }

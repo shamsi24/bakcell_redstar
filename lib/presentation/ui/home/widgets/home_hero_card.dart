@@ -33,7 +33,7 @@ class HomeHeroCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HomeBrandStrip(brands: hero.brands),
-            16.verticalSpace,
+            12.verticalSpace,
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Column(
