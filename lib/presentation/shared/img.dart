@@ -36,8 +36,7 @@ class Img {
   static const String trip = "$_icons3d/21-trip 1.png";
   static const String checkAvailability =
       "$_icons3d/22-check-availability 1.png";
-  static const String signSubscription =
-      "$_icons3d/23-sign-subscription 1.png";
+  static const String signSubscription = "$_icons3d/23-sign-subscription 1.png";
   static const String portInProcess = "$_icons3d/24-port-in-process 1.png";
   static const String simInactive = "$_icons3d/25-sim-inactive 1.png";
   static const String welcome = "$_icons3d/26-welcome 1.png";
@@ -159,6 +158,7 @@ class Img {
   static const String heart = "$_iconsLinear/Heart.svg";
   static const String history = "$_iconsLinear/History.svg";
   static const String home = "$_iconsLinear/Home.svg";
+  static const String homeFilled = "$_iconsLinear/home_filled.svg";
   static const String identityProtection =
       "$_iconsLinear/Identity protection.svg";
   static const String imageAdd = "$_iconsLinear/Image Add.svg";
@@ -200,8 +200,7 @@ class Img {
   static const String phone = "$_iconsLinear/Phone.svg";
   static const String pin = "$_iconsLinear/Pin.svg";
   static const String plusCircle = "$_iconsLinear/Plus Circle.svg";
-  static const String plusDoubleCircle =
-      "$_iconsLinear/Plus Double Circle.svg";
+  static const String plusDoubleCircle = "$_iconsLinear/Plus Double Circle.svg";
   static const String plus = "$_iconsLinear/Plus.svg";
   static const String refreshCancel = "$_iconsLinear/Refresh Cancel.svg";
   static const String refresh = "$_iconsLinear/Refresh.svg";

@@ -19,27 +19,27 @@ class MainBottomNav extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: UIColor.white,
-        border: Border(
-          top: BorderSide(color: UIColor.grey.withValues(alpha: 0.2)),
-        ),
+        border:
+            Border(top: BorderSide(color: UIColor.grey.withValues(alpha: 0.2))),
       ),
       child: SafeArea(
         top: false,
         child: SizedBox(
-          height: 76.h,
+          height: 60.h,
           child: Stack(
             clipBehavior: Clip.none,
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 12.h),
+                padding: EdgeInsets.only(top: 5.h),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: List.generate(tabs.length, (index) {
                     if (index == qrIndex) {
                       return SizedBox(width: 64.w);
                     }
                     final tab = tabs[index];
                     return MainBottomNavItem(
+                      filledIcon: tab.filledIcon,
                       icon: tab.icon,
                       label: tab.label,
                       isActive: currentIndex == index,

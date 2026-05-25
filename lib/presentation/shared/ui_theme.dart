@@ -1,14 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 
 abstract class UITheme {
+  static const String fontFamily = 'Loos';
+  static const String fontFamilyWide = 'LoosWide';
+
   static get appTheme {
     return ThemeData(
       useMaterial3: true,
       splashFactory: InkSplash.splashFactory,
+      fontFamily: fontFamily,
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: UIColor.primary,
         selectionColor: UIColor.blue,
@@ -21,13 +24,12 @@ abstract class UITheme {
         onSecondary: UIColor.primary,
       ),
       scaffoldBackgroundColor: UIColor.background,
-      fontFamily: GoogleFonts.poppins().fontFamily,
       appBarTheme: AppBarTheme(
         surfaceTintColor: UIColor.white,
         centerTitle: true,
         elevation: 0,
         titleTextStyle: TextStyle(
-          fontFamily: GoogleFonts.poppins().fontFamily,
+          fontFamily: fontFamily,
           fontSize: 16.sp,
           fontWeight: FontWeight.w500,
           color: UIColor.black,
@@ -44,10 +46,10 @@ abstract class UITheme {
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
       ),
-      cupertinoOverrideTheme: CupertinoThemeData(
+      cupertinoOverrideTheme: const CupertinoThemeData(
         textTheme: CupertinoTextThemeData(
-          textStyle: GoogleFonts.poppins(),
-          tabLabelTextStyle: GoogleFonts.poppins(),
+          textStyle: TextStyle(fontFamily: fontFamily),
+          tabLabelTextStyle: TextStyle(fontFamily: fontFamily),
         ),
       ),
     );

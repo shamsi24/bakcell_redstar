@@ -6,6 +6,8 @@ import 'package:redstar_module/presentation/shared/shared.dart';
 
 class MainBottomNavItem extends StatelessWidget {
   final String icon;
+
+  final String filledIcon;
   final String label;
   final bool isActive;
   final VoidCallback onTap;
@@ -16,25 +18,27 @@ class MainBottomNavItem extends StatelessWidget {
     required this.label,
     required this.isActive,
     required this.onTap,
+    required this.filledIcon,
   });
 
   @override
   Widget build(BuildContext context) {
     final color = isActive ? UIColor.bakcellRed : UIColor.darkGrey;
     return InkWell(
-      borderRadius: BorderRadius.circular(12.r),
       onTap: () {
         HapticFeedback.lightImpact();
         onTap();
       },
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 12.w),
+        padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 20.w),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SvgPicture.asset(icon,
-                colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
-                height: 26.h),
+            SvgPicture.asset(
+              isActive ? filledIcon : icon,
+              colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+              height: 22.h,
+            ),
             6.verticalSpace,
             Label(
               text: label,

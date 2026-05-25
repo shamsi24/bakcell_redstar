@@ -39,7 +39,7 @@ class Label extends StatelessWidget {
       overflow: overflow,
       style: TextStyle(
         fontSize: size ?? 14.sp,
-        fontFamily: fontFamily,
+        fontFamily: fontFamily ?? UITheme.fontFamily,
         fontWeight: weight ?? FontWeight.normal,
         color: color ?? UIColor.black,
         letterSpacing: latterSpacing ?? 0.3,

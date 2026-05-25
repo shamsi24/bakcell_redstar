@@ -85,4 +85,20 @@ flutter:
     - assets/icons/3d_icons/
     - assets/icons/linear_icons/
 
+  fonts:
+    - family: Loos
+      fonts:
+        - asset: assets/fonts/Loos_Normal_Regular_latCyr.ttf
+          weight: 400
+        - asset: assets/fonts/Loos_Normal_Medium_latCyr.ttf
+          weight: 500
+        - asset: assets/fonts/Loos_Normal_Bold_latCyr.ttf
+          weight: 700
+    - family: LoosWide
+      fonts:
+        - asset: assets/fonts/Loos_Wide_Medium_latCyr.ttf
+          weight: 500
+        - asset: assets/fonts/Loos_Wide_Bold_latCyr.ttf
+          weight: 700
+
 

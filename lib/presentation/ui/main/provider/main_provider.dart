@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:redstar_module/presentation/shared/shared.dart';
 
 enum MainTab {
-  home(icon: Img.home),
-  qr(icon: Img.scan),
-  partners(icon: Img.exhibition);
+  home(icon: Img.home, filledIcon: Img.homeFilled),
+  qr(icon: Img.scan, filledIcon: Img.scan),
+  partners(icon: Img.exhibition, filledIcon: Img.exhibition);
 
   final String icon;
 
-  const MainTab({required this.icon});
+  final String filledIcon;
+
+  const MainTab({required this.icon, required this.filledIcon});
 
   String get label {
     switch (this) {
