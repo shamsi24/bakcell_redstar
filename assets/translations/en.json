@@ -99,5 +99,38 @@
     "tabMain": "Main",
     "tabGetQr": "Get QR",
     "tabPartners": "Partners"
+  },
+
+  "categories": {
+    "electronicsHome": "Electronics and home",
+    "foodBeverages": "Food and beverages",
+    "market": "Market",
+    "pharmacy": "Pharmacy",
+    "beauty": "Beauty",
+    "cinema": "Cinema",
+    "restaurants": "Restaurants and cafes",
+    "shopping": "Shopping",
+    "spareParts": "Spare parts"
+  },
+
+  "qr": {
+    "claimDiscount": "Claim your {discount}% discount now",
+    "remainingLimits": "Remaining limits today:",
+    "generateCode": "Generate code",
+    "disclaimer": "Please generate the code only when you are ready to pay. This uses one of your daily limits."
+  },
+
+  "partnerDetail": {
+    "offerDetails": "Offer details",
+    "tabOffers": "Offers",
+    "tabBranches": "Branches",
+    "tabTerms": "Terms",
+    "redeem": "Redeem",
+    "redeemed": "Redeemed",
+    "weekly": "Weekly",
+    "regular": "Regular",
+    "discountSuffix": "discount",
+    "openIn": "Open in",
+    "termsTitle": "Terms & Conditions:"
   }
 }

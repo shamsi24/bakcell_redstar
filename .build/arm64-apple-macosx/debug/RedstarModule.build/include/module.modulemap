@@ -1,0 +1,3 @@
+module RedstarModule {
+    header "/Users/shamsiaghayev/StudioProjects/redstar_module/.build/arm64-apple-macosx/debug/RedstarModule.build/include/RedstarModule-Swift.h"
+}

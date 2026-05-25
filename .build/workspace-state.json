@@ -1,0 +1,175 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/package_info_plus.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "package_info_plus"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/objective_c.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "objective_c"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/Flutter.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "Flutter"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/FlutterPluginRegistrant.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "FlutterPluginRegistrant"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/shared_preferences_foundation.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "shared_preferences_foundation"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/App.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "App"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/url_launcher_ios.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "url_launcher_ios"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/local_auth_darwin.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "local_auth_darwin"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "redstar_module",
+          "kind" : "root",
+          "location" : "/Users/shamsiaghayev/StudioProjects/redstar_module",
+          "name" : "redstar_module"
+        },
+        "path" : "/Users/shamsiaghayev/StudioProjects/redstar_module/ios_spm/Frameworks/sqflite_darwin.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "sqflite_darwin"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

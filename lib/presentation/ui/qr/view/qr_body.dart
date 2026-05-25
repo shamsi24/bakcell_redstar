@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:redstar_module/presentation/shared/shared.dart';
+import 'package:redstar_module/presentation/ui/qr/widgets/qr_app_bar.dart';
+import 'package:redstar_module/presentation/ui/qr/widgets/qr_bottom_section.dart';
+import 'package:redstar_module/presentation/ui/qr/widgets/qr_code_card.dart';
+import 'package:redstar_module/presentation/ui/qr/widgets/qr_heading.dart';
 
 class QrBody extends StatelessWidget {
   const QrBody({super.key});
@@ -8,20 +11,21 @@ class QrBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.qr_code_2_rounded, size: 96.sp, color: UIColor.bakcellRed),
-            16.verticalSpace,
-            Label(
-              text: Lng.mainTabGetQr,
-              size: 20.sp,
-              weight: FontWeight.w700,
-              color: UIColor.black,
+      bottom: false,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const QrAppBar(),
+          16.verticalSpace,
+          const QrHeading(),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 24.h),
+              child: const QrCodeCard(),
             ),
-          ],
-        ),
+          ),
+          const QrBottomSection(),
+        ],
       ),
     );
   }

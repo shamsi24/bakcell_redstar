@@ -99,5 +99,38 @@
     "tabMain": "Главная",
     "tabGetQr": "QR-код",
     "tabPartners": "Партнёры"
+  },
+
+  "categories": {
+    "electronicsHome": "Электроника и дом",
+    "foodBeverages": "Еда и напитки",
+    "market": "Маркет",
+    "pharmacy": "Аптека",
+    "beauty": "Красота",
+    "cinema": "Кинотеатр",
+    "restaurants": "Рестораны и кафе",
+    "shopping": "Шопинг",
+    "spareParts": "Запчасти"
+  },
+
+  "qr": {
+    "claimDiscount": "Получите скидку {discount}% сейчас",
+    "remainingLimits": "Осталось лимитов сегодня:",
+    "generateCode": "Сгенерировать код",
+    "disclaimer": "Генерируйте код только когда готовы оплатить. Это использует один из ваших дневных лимитов."
+  },
+
+  "partnerDetail": {
+    "offerDetails": "Детали предложения",
+    "tabOffers": "Предложения",
+    "tabBranches": "Филиалы",
+    "tabTerms": "Условия",
+    "redeem": "Использовать",
+    "redeemed": "Использовано",
+    "weekly": "Еженедельно",
+    "regular": "Постоянно",
+    "discountSuffix": "скидка",
+    "openIn": "Открыть в",
+    "termsTitle": "Условия и положения:"
   }
 }

@@ -109,6 +109,43 @@ class Lng {
   static String get mainTabGetQr => 'main.tabGetQr'.tr();
   static String get mainTabPartners => 'main.tabPartners'.tr();
 
+  /* ───────────── PARTNER CATEGORIES ───────────── */
+
+  static String get categoryElectronicsHome =>
+      'categories.electronicsHome'.tr();
+  static String get categoryFoodBeverages => 'categories.foodBeverages'.tr();
+  static String get categoryMarket => 'categories.market'.tr();
+  static String get categoryPharmacy => 'categories.pharmacy'.tr();
+  static String get categoryBeauty => 'categories.beauty'.tr();
+  static String get categoryCinema => 'categories.cinema'.tr();
+  static String get categoryRestaurants => 'categories.restaurants'.tr();
+  static String get categoryShopping => 'categories.shopping'.tr();
+  static String get categorySpareParts => 'categories.spareParts'.tr();
+
+  /* ───────────── QR ───────────── */
+
+  static String qrClaimDiscount(int discount) => 'qr.claimDiscount'.tr(
+        namedArgs: {'discount': discount.toString()},
+      );
+  static String get qrRemainingLimits => 'qr.remainingLimits'.tr();
+  static String get qrGenerateCode => 'qr.generateCode'.tr();
+  static String get qrDisclaimer => 'qr.disclaimer'.tr();
+
+  /* ───────────── PARTNER DETAIL ───────────── */
+
+  static String get partnerOfferDetails => 'partnerDetail.offerDetails'.tr();
+  static String get partnerTabOffers => 'partnerDetail.tabOffers'.tr();
+  static String get partnerTabBranches => 'partnerDetail.tabBranches'.tr();
+  static String get partnerTabTerms => 'partnerDetail.tabTerms'.tr();
+  static String get partnerRedeem => 'partnerDetail.redeem'.tr();
+  static String get partnerRedeemed => 'partnerDetail.redeemed'.tr();
+  static String get partnerWeekly => 'partnerDetail.weekly'.tr();
+  static String get partnerRegular => 'partnerDetail.regular'.tr();
+  static String get partnerDiscountSuffix =>
+      'partnerDetail.discountSuffix'.tr();
+  static String get partnerOpenIn => 'partnerDetail.openIn'.tr();
+  static String get partnerTermsTitle => 'partnerDetail.termsTitle'.tr();
+
   /* ───────────── PARAMETRIC EXAMPLE ───────────── */
 
   static String minimumSymbol(int count) => 'validation.minimumSymbol'.tr(

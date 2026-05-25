@@ -99,5 +99,38 @@
     "tabMain": "Əsas",
     "tabGetQr": "QR al",
     "tabPartners": "Tərəfdaşlar"
+  },
+
+  "categories": {
+    "electronicsHome": "Elektronika və ev",
+    "foodBeverages": "Yemək və içkilər",
+    "market": "Market",
+    "pharmacy": "Aptek",
+    "beauty": "Gözəllik",
+    "cinema": "Kinoteatr",
+    "restaurants": "Restoran və kafelər",
+    "shopping": "Alış-veriş",
+    "spareParts": "Ehtiyyat hissələri"
+  },
+
+  "qr": {
+    "claimDiscount": "İndi {discount}% endirim əldə edin",
+    "remainingLimits": "Bu gün qalan limit:",
+    "generateCode": "Kod yarat",
+    "disclaimer": "Yalnız ödəməyə hazır olduqda kodu yaradın. Bu, gündəlik limitlərinizdən birini istifadə edir."
+  },
+
+  "partnerDetail": {
+    "offerDetails": "Təklif detalları",
+    "tabOffers": "Təkliflər",
+    "tabBranches": "Filiallar",
+    "tabTerms": "Şərtlər",
+    "redeem": "İstifadə et",
+    "redeemed": "İstifadə edilib",
+    "weekly": "Həftəlik",
+    "regular": "Adi",
+    "discountSuffix": "endirim",
+    "openIn": "Aç",
+    "termsTitle": "Şərtlər və qaydalar:"
   }
 }
