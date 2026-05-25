@@ -43,3 +43,4 @@ doc/api/
 # not in this Flutter source repo.
 ios_spm/
 .spm_publish/
+/devtools_options.yaml

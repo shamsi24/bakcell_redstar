@@ -35,7 +35,7 @@ class MainBottomNav extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: List.generate(tabs.length, (index) {
                     if (index == qrIndex) {
-                      return SizedBox(width: 64.w);
+                      return SizedBox.shrink();
                     }
                     final tab = tabs[index];
                     return MainBottomNavItem(

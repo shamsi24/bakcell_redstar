@@ -43,7 +43,7 @@ class MainBottomNavItem extends StatelessWidget {
             Label(
               text: label,
               size: 11.sp,
-              weight: isActive ? FontWeight.w600 : FontWeight.w400,
+              weight: FontWeight.w400,
               color: color,
             ),
           ],
